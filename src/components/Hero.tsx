@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { TypeAnimation } from "react-type-animation";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -26,22 +27,24 @@ const Hero = () => {
             <span className="text-gradient">Krishna Kumar</span>
           </h1>
           
-          <div className="text-xl md:text-2xl lg:text-3xl mb-8 text-muted-foreground">
-            <span className="inline-block">an ML Engineer</span>
-            <span className="mx-2">•</span>
-            <span className="inline-block">Data Scientist</span>
-            <span className="mx-2">•</span>
-            <span className="inline-block">AI Developer</span>
-            <span className="mx-2">•</span>
-            <span className="inline-block">AI Full‑Stack Developer</span>
+          <div className="text-xl md:text-2xl lg:text-3xl mb-12 text-muted-foreground min-h-[40px] flex items-center justify-center">
+            <TypeAnimation
+              sequence={[
+                "ML Engineer",
+                2000,
+                "Data Scientist", 
+                2000,
+                "AI Developer",
+                2000,
+                "AI Full‑Stack Developer",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ display: "inline-block" }}
+              repeat={Infinity}
+            />
           </div>
-
-          <p className="text-lg md:text-xl max-w-4xl mx-auto mb-12 text-muted-foreground leading-relaxed">
-            Building intelligent, scalable systems with LLMs, RAG, and multi‑agent frameworks. 
-            Passionate about turning cutting‑edge research into real‑world solutions—exploring 
-            opportunities at{" "}
-            <span className="text-accent font-semibold">SproutsAI</span>.
-          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
