@@ -7,18 +7,15 @@ import { projects, Project } from "@/data/projects";
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<"all" | "significant" | "ml-dl" | "development">("all");
+  const [activeCategory, setActiveCategory] = useState<"significant" | "ml-dl" | "development">("significant");
 
   const categories = [
-    { id: "all", label: "All Projects", count: projects.length },
-    { id: "significant", label: "AI & Agentic", count: projects.filter(p => p.category === "significant").length },
+    { id: "significant", label: "Best Projects", count: projects.filter(p => p.category === "significant").length },
     { id: "ml-dl", label: "ML & DL", count: projects.filter(p => p.category === "ml-dl").length },
     { id: "development", label: "Development", count: projects.filter(p => p.category === "development").length }
   ];
 
-  const filteredProjects = activeCategory === "all" 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
+  const filteredProjects = projects.filter(project => project.category === activeCategory);
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
@@ -35,10 +32,10 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient font-heading">
-            Projects
+            Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground">
-            Innovative AI solutions and full-stack applications
+            Deployed AI solutions and innovative applications
           </p>
         </div>
 

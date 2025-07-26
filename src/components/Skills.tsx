@@ -8,27 +8,32 @@ const Skills = () => {
     {
       title: "Programming",
       icon: Code,
-      skills: ["Python", "C++", "JavaScript", "HTML", "CSS", "Dart"]
+      skills: ["Python", "C++", "JavaScript", "TypeScript", "HTML", "CSS", "Dart"]
     },
     {
       title: "Web & Mobile",
       icon: Globe,
-      skills: ["FastAPI", "Flask", "Node.js", "React.js", "Flutter"]
+      skills: ["React.js", "Next.js", "Vite", "Flutter", "FastAPI", "Flask", "Node.js", "Express.js", "Puter.js"]
     },
     {
-      title: "Databases/Vector Stores",
+      title: "Databases",
       icon: Database,
-      skills: ["MySQL", "MongoDB", "Pinecone", "FAISS", "Neo4j", "Astra", "ChromaDB", "Weaviate"]
+      skills: ["MySQL", "SQLite", "MongoDB", "Pinecone", "FAISS", "Neo4j", "Astra", "ChromaDB", "Weaviate"]
     },
     {
-      title: "Cloud & DevOps",
+      title: "AI & ML",
+      icon: Zap,
+      skills: ["LangGraph", "LangChain", "Groq LLM", "Llama", "Gemini", "GPT", "Fine-tuning", "RAG", "CrewAI", "Agentic AI", "HuggingFace", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Nltk", "LSTM"]
+    },
+    {
+      title: "DevOps & Cloud",
       icon: Cloud,
-      skills: ["AWS", "Docker", "Kubernetes", "GitHub Actions", "GCP"]
+      skills: ["AWS", "GCP", "Docker", "Kubernetes", "GitHub Actions", "CircleCI", "Vercel"]
     },
     {
       title: "Tools",
       icon: Wrench,
-      skills: ["Git", "DVC", "MLflow", "DagsHub", "Prometheus", "Grafana", "Postman", "Android Studio", "Power BI"]
+      skills: ["GitHub", "DVC", "DagsHub", "MLFlow", "Prometheus", "Grafana", "Power BI", "Postman", "Android Studio", "Firebase"]
     }
   ];
 

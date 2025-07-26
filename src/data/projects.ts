@@ -5,9 +5,25 @@ export interface Project {
   features: string[];
   tags: string[];
   category: "significant" | "ml-dl" | "development";
+  website?: string;
+  github?: string;
 }
 
 export const projects: Project[] = [
+  {
+    title: "AI Resume Analyser",
+    goal: "Build an AI tool to analyze resumes for ATS-compatibility and provide actionable feedback to improve job-seeking outcomes.",
+    development: "Leveraged Sonnet-4 LLM for scoring and feedback; built with React Router, Puter.js for storage and AI functionality for backend.",
+    features: [
+      "Section-wise feedback with improvement tips",
+      "Keyword and impact analysis for better ATS matching", 
+      "Rephrasing suggestions for weak resume lines"
+    ],
+    tags: ["React Router V7", "Puter.js", "Sonnet-4", "AI", "Tailwind-CSS", "ResumeReviewer", "SonnetModel", "React"],
+    category: "significant",
+    website: "https://ai-resume-analyser-two.vercel.app/",
+    github: "https://github.com/krishnakumar51/ai-resume-analyser"
+  },
   // Significant AI & Agentic Projects
   {
     title: "Agentic Travel Planner",
