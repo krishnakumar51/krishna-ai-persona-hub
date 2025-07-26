@@ -10,6 +10,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  // Deployed Projects
   {
     title: "AI Resume Analyser",
     goal: "Build an AI tool to analyze resumes for ATS-compatibility and provide actionable feedback to improve job-seeking outcomes.",
@@ -24,6 +25,7 @@ export const projects: Project[] = [
     website: "https://ai-resume-analyser-two.vercel.app/",
     github: "https://github.com/krishnakumar51/ai-resume-analyser"
   },
+
   // Significant AI & Agentic Projects
   {
     title: "Agentic Travel Planner",
