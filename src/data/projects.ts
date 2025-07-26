@@ -4,7 +4,7 @@ export interface Project {
   development: string;
   features: string[];
   tags: string[];
-  category: "significant" | "ml-dl" | "development";
+  category: "deployed" | "significant" | "ml-dl" | "development";
   website?: string;
   github?: string;
 }
@@ -21,7 +21,7 @@ export const projects: Project[] = [
       "Rephrasing suggestions for weak resume lines"
     ],
     tags: ["React Router V7", "Puter.js", "Sonnet-4", "AI", "Tailwind-CSS", "ResumeReviewer", "SonnetModel", "React"],
-    category: "significant",
+    category: "deployed",
     website: "https://ai-resume-analyser-two.vercel.app/",
     github: "https://github.com/krishnakumar51/ai-resume-analyser"
   },

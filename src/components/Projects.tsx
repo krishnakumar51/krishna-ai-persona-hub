@@ -7,9 +7,10 @@ import { projects, Project } from "@/data/projects";
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<"significant" | "ml-dl" | "development">("significant");
+  const [activeCategory, setActiveCategory] = useState<"deployed" | "significant" | "ml-dl" | "development">("deployed");
 
   const categories = [
+    { id: "deployed", label: "Deployed Projects", count: projects.filter(p => p.category === "deployed").length },
     { id: "significant", label: "Best Projects", count: projects.filter(p => p.category === "significant").length },
     { id: "ml-dl", label: "ML & DL", count: projects.filter(p => p.category === "ml-dl").length },
     { id: "development", label: "Development", count: projects.filter(p => p.category === "development").length }
