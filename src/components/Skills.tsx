@@ -3,6 +3,75 @@ import { Badge } from "@/components/ui/badge";
 import { Code, Globe, Database, Cloud, Wrench, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
+const SkillBadge = ({ skill, delay }: { skill: string; delay: number }) => {
+  const getSkillIcon = (skillName: string) => {
+    const skill = skillName.toLowerCase();
+    if (skill.includes('python')) return '🐍';
+    if (skill.includes('javascript')) return '🟨';
+    if (skill.includes('typescript')) return '🔵';
+    if (skill.includes('react')) return '⚛️';
+    if (skill.includes('node')) return '🟢';
+    if (skill.includes('flutter')) return '🔷';
+    if (skill.includes('aws')) return '☁️';
+    if (skill.includes('docker')) return '🐳';
+    if (skill.includes('mongodb')) return '🍃';
+    if (skill.includes('mysql')) return '🐬';
+    if (skill.includes('tensorflow')) return '🧠';
+    if (skill.includes('pytorch')) return '🔥';
+    if (skill.includes('github')) return '🐙';
+    if (skill.includes('gcp')) return '☁️';
+    if (skill.includes('kubernetes')) return '⚙️';
+    if (skill.includes('html')) return '🌐';
+    if (skill.includes('css')) return '🎨';
+    if (skill.includes('langchain')) return '🔗';
+    if (skill.includes('fastapi')) return '⚡';
+    if (skill.includes('flask')) return '🌶️';
+    if (skill.includes('opencv')) return '👁️';
+    if (skill.includes('next')) return '▲';
+    if (skill.includes('neo4j')) return '🕸️';
+    if (skill.includes('firebase')) return '🔥';
+    if (skill.includes('pinecone')) return '🌲';
+    if (skill.includes('gpt') || skill.includes('gemini') || skill.includes('llama')) return '🤖';
+    return '⚡';
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0, y: 20 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ 
+        duration: 0.5, 
+        delay: delay,
+        type: "spring",
+        stiffness: 300
+      }}
+      viewport={{ once: true }}
+      whileHover={{ 
+        scale: 1.1, 
+        rotate: [0, -5, 5, 0],
+        y: -5,
+        transition: { duration: 0.3 }
+      }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <Badge 
+        variant="secondary"
+        className="group cursor-pointer hover:bg-primary/20 hover:text-primary hover:shadow-glow transition-all duration-500 transform border border-border/50 hover:border-primary/30 relative overflow-hidden"
+      >
+        {/* Background glow effect */}
+        <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+        
+        <span className="flex items-center gap-2 relative z-10">
+          <span className="text-lg group-hover:scale-110 transition-transform duration-300">
+            {getSkillIcon(skill)}
+          </span>
+          <span className="font-medium">{skill}</span>
+        </span>
+      </Badge>
+    </motion.div>
+  );
+};
+
 const Skills = () => {
   const skillCategories = [
     {
@@ -120,29 +189,13 @@ const Skills = () => {
                   </CardHeader>
                   
                   <CardContent className="relative z-10">
-                    <div className="flex flex-wrap gap-2 justify-center">
+                    <div className="flex flex-wrap gap-3 justify-center">
                       {category.skills.map((skill, skillIndex) => (
-                        <motion.div
+                        <SkillBadge 
                           key={skillIndex}
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ 
-                            duration: 0.4, 
-                            delay: (index * 0.1) + (skillIndex * 0.05),
-                            type: "spring",
-                            stiffness: 300
-                          }}
-                          viewport={{ once: true }}
-                          whileHover={{ scale: 1.1, rotate: 2 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <Badge 
-                            variant="secondary"
-                            className="cursor-pointer hover:bg-primary/20 hover:text-primary hover:shadow-md transition-all duration-300 transform"
-                          >
-                            {skill}
-                          </Badge>
-                        </motion.div>
+                          skill={skill}
+                          delay={(index * 0.1) + (skillIndex * 0.05)}
+                        />
                       ))}
                     </div>
                   </CardContent>
