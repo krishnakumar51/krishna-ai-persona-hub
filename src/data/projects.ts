@@ -24,7 +24,8 @@ export const projects: Project[] = [
     tags: ["React Router V7", "Puter.js", "Sonnet-4", "AI", "Tailwind-CSS", "ResumeReviewer", "SonnetModel", "React"],
     category: "deployed",
     website: "https://ai-resume-analyser-two.vercel.app/",
-    github: "https://github.com/krishnakumar51/ai-resume-analyser"
+    github: "https://github.com/krishnakumar51/ai-resume-analyser",
+    image: "/lovable-uploads/2cf8b468-e6e1-4a0a-bbb1-3d5e6c3da2a8.png"
   },
 
   // Significant AI & Agentic Projects
@@ -62,7 +63,8 @@ export const projects: Project[] = [
       "Concise table + summary outputs"
     ],
     tags: ["FastAPI", "Streamlit", "SQLite", "Llama/Groq LLM", "FAISS", "QA", "Analytics", "RAG"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/82bf8802-76fe-45d8-a8db-f542a0f3eacd.png"
   },
   {
     title: "Comprehensive NLP MLOps",
@@ -86,7 +88,8 @@ export const projects: Project[] = [
       "Modular pipeline for easy extension"
     ],
     tags: ["LangChain", "FAISS", "FastAPI", "Jinja2", "GPT‑3.5‑turbo", "QA", "PDFProcessing"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/6d892ec5-fbe8-451e-867b-efd0b6299a48.png"
   },
   {
     title: "Blog Writer Based on YouTube Video",
@@ -98,7 +101,8 @@ export const projects: Project[] = [
       "Ready‑to‑publish Markdown output"
     ],
     tags: ["CrewAI", "OpenAI API", "Python", "Markdown", "ContentAutomation"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/51a00b6c-6d72-40e8-b62d-e8795c6dd72b.png"
   },
   {
     title: "Reddit Sentiment Analyzer",
@@ -110,7 +114,8 @@ export const projects: Project[] = [
       "Topic/keyword filtering"
     ],
     tags: ["PRAW", "TextBlob", "matplotlib", "seaborn", "Python", "SentimentAnalysis", "Reddit"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/e2a1e901-36d9-48d9-9e7c-45380ac4584d.png"
   },
   {
     title: "News App with Summarization & Sentiment",
@@ -122,7 +127,8 @@ export const projects: Project[] = [
       "Positive/neutral/negative labels"
     ],
     tags: ["News API", "TextBlob", "Python", "Tkinter/Flask", "NewsAggregation", "Summarization", "SentimentAnalysis"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/0207fb78-b39c-4ea3-89ed-ec0ef2cb92c9.png"
   },
   {
     title: "RAG Assignment (Retrieval‑Augmented Generation)",
@@ -134,7 +140,8 @@ export const projects: Project[] = [
       "Configurable retrieval & generation pipelines"
     ],
     tags: ["FAISS", "OpenAI embeddings", "GPT", "LangChain", "RAG", "VectorSearch", "LLM"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/1cdc70a1-fe37-4cf8-9db1-851f3ebb2940.png"
   },
   {
     title: "Text Summarisation using NLP",
@@ -146,7 +153,8 @@ export const projects: Project[] = [
       "Supports raw text & file inputs"
     ],
     tags: ["NLTK", "spaCy", "HuggingFace Transformers", "Python", "Summarization", "NLP", "Transformers"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/2cf8b468-e6e1-4a0a-bbb1-3d5e6c3da2a5.png"
   },
 
   // Simple ML & DL Projects
