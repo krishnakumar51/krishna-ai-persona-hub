@@ -25,7 +25,7 @@ export const projects: Project[] = [
     category: "deployed",
     website: "https://ai-resume-analyser-two.vercel.app/",
     github: "https://github.com/krishnakumar51/ai-resume-analyser",
-    image: "/lovable-uploads/2cf8b468-e6e1-4a0a-bbb1-3d5e6c3da2a8.png"
+    image: "/lovable-uploads/ai-resume-analyser.jpg"
   },
 
   // Significant AI & Agentic Projects
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     ],
     tags: ["FastAPI", "Streamlit", "SQLite", "Llama/Groq LLM", "FAISS", "QA", "Analytics", "RAG"],
     category: "significant",
-    image: "/lovable-uploads/82bf8802-76fe-45d8-a8db-f542a0f3eacd.png"
+    image: "/lovable-uploads/hotel-booking.jpeg"
   },
   {
     title: "Comprehensive NLP MLOps",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     ],
     tags: ["LangChain", "FAISS", "FastAPI", "Jinja2", "GPT‑3.5‑turbo", "QA", "PDFProcessing"],
     category: "significant",
-    image: "/lovable-uploads/6d892ec5-fbe8-451e-867b-efd0b6299a48.png"
+    image: "/lovable-uploads/ai-interview-generator.jpg"
   },
   {
     title: "Blog Writer Based on YouTube Video",
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     ],
     tags: ["CrewAI", "OpenAI API", "Python", "Markdown", "ContentAutomation"],
     category: "significant",
-    image: "/lovable-uploads/51a00b6c-6d72-40e8-b62d-e8795c6dd72b.png"
+    image: "/lovable-uploads/blog-writer.jpeg"
   },
   {
     title: "Reddit Sentiment Analyzer",
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     ],
     tags: ["PRAW", "TextBlob", "matplotlib", "seaborn", "Python", "SentimentAnalysis", "Reddit"],
     category: "significant",
-    image: "/lovable-uploads/e2a1e901-36d9-48d9-9e7c-45380ac4584d.png"
+    image: "/lovable-uploads/reddit.jpg"
   },
   {
     title: "News App with Summarization & Sentiment",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     ],
     tags: ["News API", "TextBlob", "Python", "Tkinter/Flask", "NewsAggregation", "Summarization", "SentimentAnalysis"],
     category: "significant",
-    image: "/lovable-uploads/0207fb78-b39c-4ea3-89ed-ec0ef2cb92c9.png"
+    image: "/lovable-uploads/news.jpg"
   },
   {
     title: "RAG Assignment (Retrieval‑Augmented Generation)",
@@ -144,7 +144,7 @@ export const projects: Project[] = [
     ],
     tags: ["FAISS", "OpenAI embeddings", "GPT", "LangChain", "RAG", "VectorSearch", "LLM"],
     category: "significant",
-    image: "/lovable-uploads/1cdc70a1-fe37-4cf8-9db1-851f3ebb2940.png"
+    image: "/lovable-uploads/RAG.jpg"
   },
   {
     title: "Text Summarisation using NLP",
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     ],
     tags: ["NLTK", "spaCy", "HuggingFace Transformers", "Python", "Summarization", "NLP", "Transformers"],
     category: "significant",
-    image: "/lovable-uploads/2cf8b468-e6e1-4a0a-bbb1-3d5e6c3da2a5.png"
+    image: "/lovable-uploads/text-summarisation.jpeg"
   },
 
   // Simple ML & DL Projects
