@@ -39,7 +39,8 @@ export const projects: Project[] = [
       "Real‑time tool calls for weather, maps, currency"
     ],
     tags: ["LangGraph", "Groq LLM", "FastAPI", "Streamlit", "Mermaid", "AI", "TravelPlanner"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/9fc9db8b-3d22-4871-b5e9-98f6f5d0c336.png"
   },
   {
     title: "MLOps Pipeline for Vehicle Insurance Data",
@@ -51,7 +52,8 @@ export const projects: Project[] = [
       "FastAPI prediction microservice"
     ],
     tags: ["Python", "MongoDB Atlas", "FastAPI", "Docker", "GitHub Actions", "AWS S3", "EC2", "MLOps", "CI/CD"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/0ffde5f3-1ead-4dbb-a84e-08deb8de8de0.png"
   },
   {
     title: "Hotel Booking QA & Analytics System",
@@ -76,7 +78,8 @@ export const projects: Project[] = [
       "Zero‑downtime CI/CD releases"
     ],
     tags: ["DVC", "MLflow", "DagsHub", "Flask", "Docker", "Kubernetes (EKS)", "GitHub Actions", "Prometheus", "Grafana", "NLP", "MLOps"],
-    category: "significant"
+    category: "significant",
+    image: "/lovable-uploads/6e1f6044-9a29-4c33-86c0-93cc41f460cf.png"
   },
   {
     title: "AI‑Based Interview Question Generator",
@@ -246,7 +249,8 @@ export const projects: Project[] = [
       "Easily swap models for comparison"
     ],
     tags: ["scikit‑learn", "TF‑IDF", "Python", "FakeNews", "NLP", "Classification"],
-    category: "ml-dl"
+    category: "ml-dl",
+    image: "/lovable-uploads/2dc6fbe2-66c2-4f7b-a76a-933cd292aba1.png"
   },
   {
     title: "Stock Price Prediction Model",
