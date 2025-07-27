@@ -65,6 +65,7 @@ const Projects = () => {
               features={project.features}
               tags={project.tags}
               onClick={() => handleProjectClick(project)}
+              image={project.image}
             />
           ))}
         </div>

@@ -7,6 +7,7 @@ export interface Project {
   category: "deployed" | "significant" | "ml-dl" | "development";
   website?: string;
   github?: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -159,7 +160,8 @@ export const projects: Project[] = [
       "Modular handler functions for easy feature addition"
     ],
     tags: ["Python", "Telegram Bot API", "Chatbot"],
-    category: "ml-dl"
+    category: "ml-dl",
+    image: "/lovable-uploads/28923f6b-bdfc-449b-8eef-4f18f4ec53fc.png"
   },
   {
     title: "Color Detection using HSV",
@@ -171,7 +173,8 @@ export const projects: Project[] = [
       "Bounding boxes around detected color regions"
     ],
     tags: ["OpenCV", "Python", "ComputerVision", "HSV"],
-    category: "ml-dl"
+    category: "ml-dl",
+    image: "/lovable-uploads/3dcc4dae-e5c8-4dce-98ca-a5dbd0e6b753.png"
   },
   {
     title: "Face Anonymizer",
@@ -183,7 +186,8 @@ export const projects: Project[] = [
       "Privacy‑first preprocessing tool"
     ],
     tags: ["OpenCV", "Python", "Privacy", "ComputerVision", "Anonymization"],
-    category: "ml-dl"
+    category: "ml-dl",
+    image: "/lovable-uploads/98924ac7-42ba-48f8-a1e3-b637a6cf23fd.png"
   },
   {
     title: "Loan Approval Prediction System",
@@ -195,7 +199,8 @@ export const projects: Project[] = [
       "Web form interface for demo predictions"
     ],
     tags: ["scikit‑learn", "Flask", "Python", "FinTech", "ML", "Classification"],
-    category: "ml-dl"
+    category: "ml-dl",
+    image: "/lovable-uploads/1ca27cab-5be8-4324-a8b0-3f939de968e7.png"
   },
   {
     title: "Image Scraping Tool",
@@ -207,7 +212,8 @@ export const projects: Project[] = [
       "Error handling and retry logic"
     ],
     tags: ["Python", "requests", "BeautifulSoup", "Selenium", "WebScraping", "Automation"],
-    category: "ml-dl"
+    category: "ml-dl",
+    image: "/lovable-uploads/1d72e2c0-da40-4857-9dd5-adaf24e7d709.png"
   },
   {
     title: "Web Scraping Framework",
@@ -219,7 +225,8 @@ export const projects: Project[] = [
       "Retry & rate‑limit handling"
     ],
     tags: ["Python", "requests", "BeautifulSoup", "DataExtraction", "WebScraping"],
-    category: "ml-dl"
+    category: "ml-dl",
+    image: "/lovable-uploads/dc682805-760f-41d4-8395-0e4464adccb2.png"
   },
   {
     title: "Fake News Detection Model",
@@ -243,7 +250,8 @@ export const projects: Project[] = [
       "Model comparison (linear vs. tree‑based)"
     ],
     tags: ["yfinance", "scikit‑learn", "matplotlib", "TimeSeries", "Forecasting"],
-    category: "ml-dl"
+    category: "ml-dl",
+    image: "/lovable-uploads/287c0408-8c83-4466-b496-e679d788dece.png"
   },
 
   // Development Projects
@@ -257,7 +265,8 @@ export const projects: Project[] = [
       "Payment gateway integration"
     ],
     tags: ["React", "Django/Flask", "Python", "PostgreSQL/MySQL", "FullStack", "ECommerce"],
-    category: "development"
+    category: "development",
+    image: "/lovable-uploads/649ccd07-f04d-445d-8e71-d50165c34272.png"
   },
   {
     title: "Residence Parking App",
@@ -269,7 +278,8 @@ export const projects: Project[] = [
       "Booking history & notifications"
     ],
     tags: ["Flask", "HTML/CSS/JS", "Python", "SQLite/PostgreSQL", "WebApp", "ParkingManagement"],
-    category: "development"
+    category: "development",
+    image: "/lovable-uploads/515afcdd-91ba-48a0-908f-399168034835.png"
   },
   {
     title: "To‑Do Application",
@@ -281,6 +291,7 @@ export const projects: Project[] = [
       "Clean, minimal UI"
     ],
     tags: ["React", "Flask/localStorage", "Python", "TaskManager", "Productivity"],
-    category: "development"
+    category: "development",
+    image: "/lovable-uploads/7bf85191-545f-460c-9f3f-966aa6f86983.png"
   }
 ];

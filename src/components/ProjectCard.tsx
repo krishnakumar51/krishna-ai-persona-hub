@@ -10,9 +10,10 @@ interface ProjectCardProps {
   features: string[];
   tags: string[];
   onClick: () => void;
+  image?: string;
 }
 
-const ProjectCard = ({ title, goal, development, features, tags, onClick }: ProjectCardProps) => {
+const ProjectCard = ({ title, goal, development, features, tags, onClick, image }: ProjectCardProps) => {
   return (
     <motion.div
       whileHover={{ y: -8 }}
@@ -28,16 +29,27 @@ const ProjectCard = ({ title, goal, development, features, tags, onClick }: Proj
         {/* Glowing border effect */}
         <div className="absolute inset-0 rounded-lg bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-[2px]" />
         
-        {/* Thumbnail area with particles */}
-        <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-smooth" />
+        {/* Thumbnail area with image */}
+        <div className="relative h-48 overflow-hidden">
+          {image ? (
+            <>
+              <img 
+                src={image} 
+                alt={title}
+                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-60 group-hover:opacity-40 transition-all duration-500" />
+            </>
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20" />
+          )}
           
           {/* Floating particles on hover */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(4)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-1 h-1 bg-accent/50 rounded-full opacity-0 group-hover:opacity-100"
+                className="absolute w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100"
                 style={{
                   left: `${20 + i * 20}%`,
                   top: `${30 + (i % 2) * 40}%`,
@@ -60,19 +72,21 @@ const ProjectCard = ({ title, goal, development, features, tags, onClick }: Proj
               whileHover={{ rotate: 12, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              <ExternalLink className="w-6 h-6 text-primary drop-shadow-glow" />
+              <ExternalLink className="w-6 h-6 text-white drop-shadow-glow" />
             </motion.div>
           </div>
           
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div
-              className="text-6xl font-bold text-muted/20 group-hover:text-muted/30 transition-smooth"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Sparkles className="w-16 h-16" />
-            </motion.div>
-          </div>
+          {!image && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div
+                className="text-6xl font-bold text-muted/20 group-hover:text-muted/30 transition-smooth"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Sparkles className="w-16 h-16" />
+              </motion.div>
+            </div>
+          )}
         </div>
 
         <CardHeader className="relative z-10">
