@@ -33,10 +33,11 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient font-heading">
-            Featured Projects
+            Projects
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Deployed AI solutions and innovative applications
+          <p className="text-xl text-muted-foreground font-medium leading-relaxed tracking-wide md:text-2xl lg:text-3xl mb-4">
+
+            Code. Create. Evolve. 🌱🧠
           </p>
         </div>
 

@@ -67,7 +67,7 @@ const Experience = () => {
               >
                 <CardTitle className="text-2xl md:text-3xl text-foreground flex items-center gap-3">
                   <TrendingUp className="w-8 h-8 text-primary" />
-                  ML Engineer & AI Developer
+                  AI Developer
                 </CardTitle>
               </motion.div>
               
