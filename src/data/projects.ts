@@ -40,7 +40,8 @@ export const projects: Project[] = [
     ],
     tags: ["LangGraph", "Groq LLM", "FastAPI", "Streamlit", "Mermaid", "AI", "TravelPlanner"],
     category: "significant",
-    image: "/lovable-uploads/9fc9db8b-3d22-4871-b5e9-98f6f5d0c336.png"
+    image: "/lovable-uploads/9fc9db8b-3d22-4871-b5e9-98f6f5d0c336.png",
+    github: "https://github.com/krishnakumar51/Trip-planner"
   },
   {
     title: "MLOps Pipeline for Vehicle Insurance Data",
@@ -53,7 +54,8 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "MongoDB Atlas", "FastAPI", "Docker", "GitHub Actions", "AWS S3", "EC2", "MLOps", "CI/CD"],
     category: "significant",
-    image: "/lovable-uploads/0ffde5f3-1ead-4dbb-a84e-08deb8de8de0.png"
+    image: "/lovable-uploads/0ffde5f3-1ead-4dbb-a84e-08deb8de8de0.png",
+    github: "https://github.com/krishnakumar51/Vehicle-Data-Insurance"
   },
   {
     title: "Hotel Booking QA & Analytics System",
@@ -66,7 +68,8 @@ export const projects: Project[] = [
     ],
     tags: ["FastAPI", "Streamlit", "SQLite", "Llama/Groq LLM", "FAISS", "QA", "Analytics", "RAG"],
     category: "significant",
-    image: "/lovable-uploads/hotel-booking.jpeg"
+    image: "/lovable-uploads/hotel-booking.jpeg",
+    github: "https://github.com/krishnakumar51/Hotelbooking-QA"
   },
   {
     title: "Comprehensive NLP MLOps",
@@ -79,7 +82,8 @@ export const projects: Project[] = [
     ],
     tags: ["DVC", "MLflow", "DagsHub", "Flask", "Docker", "Kubernetes (EKS)", "GitHub Actions", "Prometheus", "Grafana", "NLP", "MLOps"],
     category: "significant",
-    image: "/lovable-uploads/6e1f6044-9a29-4c33-86c0-93cc41f460cf.png"
+    image: "/lovable-uploads/6e1f6044-9a29-4c33-86c0-93cc41f460cf.png",
+    github: "https://github.com/krishnakumar51/nlp-project"
   },
   {
     title: "AI‑Based Interview Question Generator",
@@ -92,7 +96,8 @@ export const projects: Project[] = [
     ],
     tags: ["LangChain", "FAISS", "FastAPI", "Jinja2", "GPT‑3.5‑turbo", "QA", "PDFProcessing"],
     category: "significant",
-    image: "/lovable-uploads/ai-interview-generator.jpg"
+    image: "/lovable-uploads/ai-interview-generator.jpg",
+    github: "https://github.com/krishnakumar51/Interview-Question-Generator"
   },
   {
     title: "Blog Writer Based on YouTube Video",
@@ -105,7 +110,8 @@ export const projects: Project[] = [
     ],
     tags: ["CrewAI", "OpenAI API", "Python", "Markdown", "ContentAutomation"],
     category: "significant",
-    image: "/lovable-uploads/blog-writer.jpeg"
+    image: "/lovable-uploads/blog-writer.jpeg",
+    github: "https://github.com/krishnakumar51/Blog-Writer-using-YouTube-Video-Agent"
   },
   {
     title: "Reddit Sentiment Analyzer",
@@ -118,7 +124,8 @@ export const projects: Project[] = [
     ],
     tags: ["PRAW", "TextBlob", "matplotlib", "seaborn", "Python", "SentimentAnalysis", "Reddit"],
     category: "significant",
-    image: "/lovable-uploads/reddit.jpg"
+    image: "/lovable-uploads/reddit.jpg",
+    github: "https://github.com/krishnakumar51/reddit"
   },
   {
     title: "News App with Summarization & Sentiment",
@@ -131,7 +138,8 @@ export const projects: Project[] = [
     ],
     tags: ["News API", "TextBlob", "Python", "Tkinter/Flask", "NewsAggregation", "Summarization", "SentimentAnalysis"],
     category: "significant",
-    image: "/lovable-uploads/news.jpg"
+    image: "/lovable-uploads/news.jpg",
+    github: "https://github.com/krishnakumar51/News-App"
   },
   {
     title: "RAG Assignment (Retrieval‑Augmented Generation)",
@@ -144,7 +152,8 @@ export const projects: Project[] = [
     ],
     tags: ["FAISS", "OpenAI embeddings", "GPT", "LangChain", "RAG", "VectorSearch", "LLM"],
     category: "significant",
-    image: "/lovable-uploads/RAG.jpg"
+    image: "/lovable-uploads/RAG.jpg",
+    github: "https://github.com/krishnakumar51/RAG-assginment"
   },
   {
     title: "Text Summarisation using NLP",
@@ -157,7 +166,8 @@ export const projects: Project[] = [
     ],
     tags: ["NLTK", "spaCy", "HuggingFace Transformers", "Python", "Summarization", "NLP", "Transformers"],
     category: "significant",
-    image: "/lovable-uploads/text-summarisation.jpeg"
+    image: "/lovable-uploads/text-summarisation.jpeg",
+    github: "https://github.com/krishnakumar51/Text-Summarisation-using-NLP"
   },
 
   // Simple ML & DL Projects
@@ -172,7 +182,8 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "Telegram Bot API", "Chatbot"],
     category: "ml-dl",
-    image: "/lovable-uploads/28923f6b-bdfc-449b-8eef-4f18f4ec53fc.png"
+    image: "/lovable-uploads/28923f6b-bdfc-449b-8eef-4f18f4ec53fc.png",
+    github: "https://github.com/krishnakumar51/Telegram-chatbot"
   },
   {
     title: "Color Detection using HSV",
@@ -185,7 +196,8 @@ export const projects: Project[] = [
     ],
     tags: ["OpenCV", "Python", "ComputerVision", "HSV"],
     category: "ml-dl",
-    image: "/lovable-uploads/3dcc4dae-e5c8-4dce-98ca-a5dbd0e6b753.png"
+    image: "/lovable-uploads/3dcc4dae-e5c8-4dce-98ca-a5dbd0e6b753.png",
+    github: "https://github.com/krishnakumar51/Color-detection-using-HSV-"
   },
   {
     title: "Face Anonymizer",
@@ -198,7 +210,8 @@ export const projects: Project[] = [
     ],
     tags: ["OpenCV", "Python", "Privacy", "ComputerVision", "Anonymization"],
     category: "ml-dl",
-    image: "/lovable-uploads/98924ac7-42ba-48f8-a1e3-b637a6cf23fd.png"
+    image: "/lovable-uploads/98924ac7-42ba-48f8-a1e3-b637a6cf23fd.png",
+    github: "https://github.com/krishnakumar51/Face-Anonymizer"
   },
   {
     title: "Loan Approval Prediction System",
@@ -211,7 +224,8 @@ export const projects: Project[] = [
     ],
     tags: ["scikit‑learn", "Flask", "Python", "FinTech", "ML", "Classification"],
     category: "ml-dl",
-    image: "/lovable-uploads/1ca27cab-5be8-4324-a8b0-3f939de968e7.png"
+    image: "/lovable-uploads/1ca27cab-5be8-4324-a8b0-3f939de968e7.png",
+    github: "https://github.com/krishnakumar51/Loan-Approval-System"
   },
   {
     title: "Image Scraping Tool",
@@ -224,7 +238,8 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "requests", "BeautifulSoup", "Selenium", "WebScraping", "Automation"],
     category: "ml-dl",
-    image: "/lovable-uploads/1d72e2c0-da40-4857-9dd5-adaf24e7d709.png"
+    image: "/lovable-uploads/1d72e2c0-da40-4857-9dd5-adaf24e7d709.png",
+    github:"https://github.com/krishnakumar51/Image-Scrapping"
   },
   {
     title: "Web Scraping Framework",
@@ -237,7 +252,8 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "requests", "BeautifulSoup", "DataExtraction", "WebScraping"],
     category: "ml-dl",
-    image: "/lovable-uploads/dc682805-760f-41d4-8395-0e4464adccb2.png"
+    image: "/lovable-uploads/dc682805-760f-41d4-8395-0e4464adccb2.png",
+    github: "https://github.com/krishnakumar51/Web-Scrapping"
   },
   {
     title: "Fake News Detection Model",
@@ -250,7 +266,8 @@ export const projects: Project[] = [
     ],
     tags: ["scikit‑learn", "TF‑IDF", "Python", "FakeNews", "NLP", "Classification"],
     category: "ml-dl",
-    image: "/lovable-uploads/2dc6fbe2-66c2-4f7b-a76a-933cd292aba1.png"
+    image: "/lovable-uploads/2dc6fbe2-66c2-4f7b-a76a-933cd292aba1.png",
+    github: "https://github.com/krishnakumar51/Fake-News-Detection-Mode"
   },
   {
     title: "Stock Price Prediction Model",
@@ -263,7 +280,8 @@ export const projects: Project[] = [
     ],
     tags: ["yfinance", "scikit‑learn", "matplotlib", "TimeSeries", "Forecasting"],
     category: "ml-dl",
-    image: "/lovable-uploads/287c0408-8c83-4466-b496-e679d788dece.png"
+    image: "/lovable-uploads/287c0408-8c83-4466-b496-e679d788dece.png",
+    github: "https://github.com/krishnakumar51/Stock-Price-Prediction-Model"
   },
 
   // Development Projects
@@ -278,7 +296,8 @@ export const projects: Project[] = [
     ],
     tags: ["React", "Django/Flask", "Python", "PostgreSQL/MySQL", "FullStack", "ECommerce"],
     category: "development",
-    image: "/lovable-uploads/649ccd07-f04d-445d-8e71-d50165c34272.png"
+    image: "/lovable-uploads/649ccd07-f04d-445d-8e71-d50165c34272.png",
+    github: "https://github.com/krishnakumar51/E-Commerce-App"
   },
   {
     title: "Residence Parking App",
@@ -291,7 +310,8 @@ export const projects: Project[] = [
     ],
     tags: ["Flask", "HTML/CSS/JS", "Python", "SQLite/PostgreSQL", "WebApp", "ParkingManagement"],
     category: "development",
-    image: "/lovable-uploads/515afcdd-91ba-48a0-908f-399168034835.png"
+    image: "/lovable-uploads/515afcdd-91ba-48a0-908f-399168034835.png",
+    github: "https://github.com/krishnakumar51/Residence-parking-App"
   },
   {
     title: "To‑Do Application",
@@ -304,6 +324,7 @@ export const projects: Project[] = [
     ],
     tags: ["React", "Flask/localStorage", "Python", "TaskManager", "Productivity"],
     category: "development",
-    image: "/lovable-uploads/7bf85191-545f-460c-9f3f-966aa6f86983.png"
+    image: "/lovable-uploads/7bf85191-545f-460c-9f3f-966aa6f86983.png", 
+    github: "https://github.com/krishnakumar51/To-Do-application"
   }
 ];

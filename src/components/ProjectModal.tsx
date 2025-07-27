@@ -1,14 +1,16 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle, X } from "lucide-react";
+// ─── src/components/ProjectModal.tsx ───
 
-interface Project {
-  title: string;
-  goal: string;
-  development: string;
-  features: string[];
-  tags: string[];
-}
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink,Github } from "lucide-react";
+import { Project } from "@/data/projects";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -17,63 +19,107 @@ interface ProjectModalProps {
 }
 
 const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
-  if (!project) return null;
+  if (!isOpen || project === null) return null;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-card border-muted/20">
-        <DialogHeader>
-          <div className="flex items-start justify-between">
-            <DialogTitle className="text-2xl md:text-3xl text-gradient font-heading pr-8">
+      <DialogContent className="max-w-2xl p-0 overflow-hidden">
+        {/* Header image */}
+        {/* {project.image && (
+          <div className="h-48 w-full overflow-hidden">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        )} */}
+
+        <div className="p-6">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold">
               {project.title}
             </DialogTitle>
-          </div>
-        </DialogHeader>
+          </DialogHeader>
 
-        <div className="space-y-8">
-          {/* Goal Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-accent mb-3">Goal</h3>
-            <p className="text-muted-foreground leading-relaxed text-lg">
+          {/* Goal & Development */}
+          <section className="mt-4 space-y-4">
+            <p>
+              <span className="font-semibold">🎯 Goal:</span>{" "}
               {project.goal}
             </p>
-          </div>
-
-          {/* Development Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-accent mb-3">Development Summary</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p>
+              <span className="font-semibold">⚙️ Development:</span>{" "}
               {project.development}
             </p>
-          </div>
+          </section>
 
-          {/* Key Features Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-accent mb-4">Key Features</h3>
-            <div className="space-y-3">
-              {project.features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3 group">
-                  <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0 group-hover:scale-110 transition-smooth" />
-                  <p className="text-muted-foreground group-hover:text-foreground transition-smooth leading-relaxed">
-                    {feature}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Technologies Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-accent mb-4">Technologies & Tags</h3>
+          {/* Features as Badges */}
+          <section className="mt-6">
+            <h3 className="font-medium mb-2">✨ Features:</h3>
             <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, index) => (
-                <Badge key={index} variant="secondary" className="hover:bg-primary/20 transition-smooth">
-                  {tag}
+              {project.features.map((feat, idx) => (
+                <Badge key={idx} className="bg-primary/10 text-primary">
+                  {feat}
                 </Badge>
               ))}
             </div>
-          </div>
+          </section>
+
+          {/* Tags as Badges */}
+          {project.tags?.length > 0 && (
+            <section className="mt-6">
+              <h3 className="font-medium mb-2">🏷️ Tags:</h3>
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag, idx) => (
+                  <Badge key={idx} variant="outline">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
+
+        {/* Footer with Icon Buttons */}
+        <DialogFooter className="flex justify-end gap-4 px-6 py-4">
+          {project.website && (
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <a
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Live Site
+              </a>
+            </Button>
+          )}
+          {project.github && (
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1"
+              >
+                <Github className="w-4 h-4" />
+                GitHub
+              </a>
+            </Button>
+          )}
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
