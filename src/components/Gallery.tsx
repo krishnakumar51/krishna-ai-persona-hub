@@ -177,13 +177,31 @@ const Gallery = () => {
               "/lovable-uploads/30ca57ad-07a1-4585-a098-346517c1e47b.png", 
               "/lovable-uploads/dd70724d-c549-427b-a720-60149b920d16.png",
               "/lovable-uploads/bc94b9eb-b4d9-4d54-928f-df972c87f746.png",
-              "/lovable-uploads/ab779623-fd6b-4066-84c1-459f41f713f2.png"
+              "/lovable-uploads/ab779623-fd6b-4066-84c1-459f41f713f2.png",
+              "/lovable-uploads/2/1.jpg",
+              "/lovable-uploads/2/2.jpg",
+              "/lovable-uploads/2/3.jpg",
+              "/lovable-uploads/2/4.jpg",
+              "/lovable-uploads/2/5.jpg",
+              "/lovable-uploads/2/6.jpg",
+              "/lovable-uploads/2/7.jpg",
+              "/lovable-uploads/2/8.jpg",
             ].concat([
               "/lovable-uploads/c56d313c-0d3f-497b-9f6d-98257f78280c.png",
               "/lovable-uploads/30ca57ad-07a1-4585-a098-346517c1e47b.png", 
               "/lovable-uploads/dd70724d-c549-427b-a720-60149b920d16.png",
               "/lovable-uploads/bc94b9eb-b4d9-4d54-928f-df972c87f746.png",
-              "/lovable-uploads/ab779623-fd6b-4066-84c1-459f41f713f2.png"
+              "/lovable-uploads/ab779623-fd6b-4066-84c1-459f41f713f2.png",
+              "/lovable-uploads/ab779623-fd6b-4066-84c1-459f41f713f2.png",
+              "/lovable-uploads/2/1.jpg",
+              "/lovable-uploads/2/2.jpg",
+              "/lovable-uploads/2/3.jpg",
+              "/lovable-uploads/2/4.jpg",
+              "/lovable-uploads/2/5.jpg",
+              "/lovable-uploads/2/6.jpg",
+              "/lovable-uploads/2/7.jpg",
+              "/lovable-uploads/2/8.jpg",
+              
             ]).map((image, index) => (
               <div 
                 key={index}
@@ -214,13 +232,29 @@ const Gallery = () => {
               "/lovable-uploads/50189081-aab8-4e69-8e8f-7ec4e9adc448.png",
               "/lovable-uploads/4dbd42ba-6891-4495-a465-123e57d75edc.png",
               "/lovable-uploads/e3e82d0a-f545-49ac-afc7-9f8dfe040e0b.png",
-              "/lovable-uploads/246706fb-40b2-4200-b7e9-138e78bfa1b1.png"
+              "/lovable-uploads/246706fb-40b2-4200-b7e9-138e78bfa1b1.png",
+              "/lovable-uploads/2/9.jpg",
+              "/lovable-uploads/2/10.jpg",
+              "/lovable-uploads/2/11.jpg",
+              "/lovable-uploads/2/12.jpg",
+              "/lovable-uploads/2/13.jpg",
+              "/lovable-uploads/2/14.jpg",
+              "/lovable-uploads/2/15.jpg",
+              "/lovable-uploads/2/16.jpg",
             ].concat([
               "/lovable-uploads/46672a7a-31f9-468c-8a48-f21f58ab22e2.png",
               "/lovable-uploads/50189081-aab8-4e69-8e8f-7ec4e9adc448.png",
               "/lovable-uploads/4dbd42ba-6891-4495-a465-123e57d75edc.png",
               "/lovable-uploads/e3e82d0a-f545-49ac-afc7-9f8dfe040e0b.png",
-              "/lovable-uploads/246706fb-40b2-4200-b7e9-138e78bfa1b1.png"
+              "/lovable-uploads/246706fb-40b2-4200-b7e9-138e78bfa1b1.png",
+              "/lovable-uploads/2/9.jpg",
+              "/lovable-uploads/2/10.jpg",
+              "/lovable-uploads/2/11.jpg",
+              "/lovable-uploads/2/12.jpg",
+              "/lovable-uploads/2/13.jpg",
+              "/lovable-uploads/2/14.jpg",
+              "/lovable-uploads/2/15.jpg",
+              "/lovable-uploads/2/16.jpg",
             ]).map((image, index) => (
               <div 
                 key={index}
