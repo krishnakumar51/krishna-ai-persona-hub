@@ -1,3 +1,4 @@
+import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from "framer-motion";
 

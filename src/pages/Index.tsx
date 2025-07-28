@@ -1,17 +1,17 @@
-import { Suspense, lazy } from "react";
+import React, { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import LazySection from "@/components/LazySection";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 
-// Lazy load heavy components
-const Experience = lazy(() => import("@/components/Experience"));
-const Education = lazy(() => import("@/components/Education"));
-const Projects = lazy(() => import("@/components/Projects"));
-const Skills = lazy(() => import("@/components/Skills"));
-const Certifications = lazy(() => import("@/components/Certifications"));
-const Gallery = lazy(() => import("@/components/Gallery"));
-const Contact = lazy(() => import("@/components/Contact"));
+// Simple lazy loading without external dependencies
+const LazyComponent = ({ importFn, fallback }: { importFn: () => Promise<{ default: React.ComponentType<any> }>, fallback: React.ReactNode }) => {
+  const Component = React.lazy(importFn);
+  return (
+    <Suspense fallback={fallback}>
+      <Component />
+    </Suspense>
+  );
+};
 
 const Index = () => {
   return (
@@ -23,62 +23,55 @@ const Index = () => {
         <Hero />
       </div>
       
-      {/* Lazy loaded sections with beautiful loading states */}
-      <LazySection 
-        component={() => import("@/components/Experience")}
-        id="experience"
-        skeletonType="card"
-        skeletonCount={3}
-        className="section-container"
-      />
+      {/* Simplified lazy loaded sections */}
+      <div id="experience" className="section-container">
+        <LazyComponent 
+          importFn={() => import("@/components/Experience")}
+          fallback={<LoadingSkeleton type="card" count={3} />}
+        />
+      </div>
       
-      <LazySection 
-        component={() => import("@/components/Education")}
-        id="education"
-        skeletonType="card"
-        skeletonCount={2}
-        className="section-container"
-      />
+      <div id="education" className="section-container">
+        <LazyComponent 
+          importFn={() => import("@/components/Education")}
+          fallback={<LoadingSkeleton type="card" count={2} />}
+        />
+      </div>
       
-      <LazySection 
-        component={() => import("@/components/Projects")}
-        id="projects"
-        skeletonType="projects"
-        skeletonCount={6}
-        className="section-container"
-      />
+      <div id="projects" className="section-container">
+        <LazyComponent 
+          importFn={() => import("@/components/Projects")}
+          fallback={<LoadingSkeleton type="projects" count={6} />}
+        />
+      </div>
       
-      <LazySection 
-        component={() => import("@/components/Skills")}
-        id="skills"
-        skeletonType="skills"
-        skeletonCount={18}
-        className="section-container"
-      />
+      <div id="skills" className="section-container">
+        <LazyComponent 
+          importFn={() => import("@/components/Skills")}
+          fallback={<LoadingSkeleton type="skills" count={18} />}
+        />
+      </div>
       
-      <LazySection 
-        component={() => import("@/components/Certifications")}
-        id="certifications"
-        skeletonType="card"
-        skeletonCount={4}
-        className="section-container"
-      />
+      <div id="certifications" className="section-container">
+        <LazyComponent 
+          importFn={() => import("@/components/Certifications")}
+          fallback={<LoadingSkeleton type="card" count={4} />}
+        />
+      </div>
       
-      <LazySection 
-        component={() => import("@/components/Gallery")}
-        id="gallery"
-        skeletonType="gallery"
-        skeletonCount={8}
-        className="section-container"
-      />
+      <div id="gallery" className="section-container">
+        <LazyComponent 
+          importFn={() => import("@/components/Gallery")}
+          fallback={<LoadingSkeleton type="gallery" count={8} />}
+        />
+      </div>
       
-      <LazySection 
-        component={() => import("@/components/Contact")}
-        id="contact"
-        skeletonType="card"
-        skeletonCount={1}
-        className="section-container"
-      />
+      <div id="contact" className="section-container">
+        <LazyComponent 
+          importFn={() => import("@/components/Contact")}
+          fallback={<LoadingSkeleton type="card" count={1} />}
+        />
+      </div>
     </div>
   );
 };
