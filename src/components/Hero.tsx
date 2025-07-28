@@ -11,38 +11,45 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gpu-accelerated">
+      {/* Enhanced Animated Background */}
       <div className="absolute inset-0 z-0">
         <motion.div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
           style={{ backgroundImage: `url(${heroImage})` }}
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/95" />
+          <div className="absolute inset-0 bg-gradient-hero opacity-60" />
         </motion.div>
         
-        {/* Floating particles */}
+        {/* Enhanced Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(12)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-primary/30 rounded-full"
+              className={`absolute rounded-full ${
+                i % 3 === 0 ? 'w-2 h-2 bg-primary/40' : 
+                i % 3 === 1 ? 'w-1 h-1 bg-accent/30' : 
+                'w-1.5 h-1.5 bg-primary/20'
+              }`}
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-                y: [-20, 20, -20],
-                opacity: [0.3, 0.8, 0.3],
-                scale: [1, 1.5, 1],
+                y: [-30, 30, -30],
+                x: [-10, 10, -10],
+                opacity: [0.2, 0.8, 0.2],
+                scale: [0.8, 1.2, 0.8],
               }}
               transition={{
-                duration: 3 + Math.random() * 2,
+                duration: 4 + Math.random() * 3,
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: Math.random() * 3,
+                ease: "easeInOut",
               }}
             />
           ))}
@@ -66,13 +73,21 @@ const Hero = () => {
           </motion.div>
 
           <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-heading"
-            initial={{ opacity: 0, y: 30 }}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-heading will-change-transform"
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
           >
             I'm{" "}
-            <span className="text-gradient hover-tilt inline-block">Krishna Kumar</span>
+            <span className="text-gradient hover-tilt inline-block relative">
+              Krishna Kumar
+              <motion.div
+                className="absolute -inset-1 bg-gradient-primary opacity-20 blur-xl rounded-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 0.2, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
+            </span>
           </motion.h1>
           
           <motion.div 
@@ -109,18 +124,24 @@ const Hero = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              className="will-change-transform"
             >
               <Button 
                 size="lg" 
-                className="group relative overflow-hidden bg-gradient-primary border-0 hover:shadow-glow text-lg px-8 py-6 font-semibold"
+                className="group relative overflow-hidden bg-gradient-primary border-0 hover:shadow-glow text-lg px-8 py-6 font-semibold transition-bounce"
                 onClick={() => scrollToSection("projects")}
               >
                 <span className="relative z-10">View My Projects</span>
                 <motion.div
-                  className="absolute inset-0 bg-white/10"
+                  className="absolute inset-0 bg-white/15"
                   initial={{ x: "-100%" }}
                   whileHover={{ x: "100%" }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.7 }}
+                />
+                <motion.div
+                  className="absolute inset-0 bg-gradient-accent opacity-0"
+                  whileHover={{ opacity: 0.3 }}
+                  transition={{ duration: 0.3 }}
                 />
               </Button>
             </motion.div>
@@ -128,11 +149,12 @@ const Hero = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              className="will-change-transform"
             >
               <Button 
                 variant="outline" 
                 size="lg"
-                className="glassmorphism hover:bg-white/10 border-white/20 text-lg px-8 py-6 font-semibold"
+                className="glassmorphism hover:bg-white/10 border-primary/30 text-lg px-8 py-6 font-semibold hover:shadow-accent-glow transition-bounce"
                 onClick={() => scrollToSection("contact")}
               >
                 Get In Touch

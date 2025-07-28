@@ -68,12 +68,16 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-subtle': 'var(--gradient-subtle)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
+				'accent-glow': 'var(--shadow-accent-glow)',
 				'card': 'var(--shadow-card)',
-				'elevated': 'var(--shadow-elevated)'
+				'elevated': 'var(--shadow-elevated)',
+				'inner': 'var(--shadow-inner)'
 			},
 			fontFamily: {
 				'heading': ['Inter', 'system-ui', 'sans-serif'],

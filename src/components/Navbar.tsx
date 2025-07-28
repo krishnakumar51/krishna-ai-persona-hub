@@ -46,12 +46,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border shadow-card">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-primary">Krishna Kumar</span>
+            <span className="text-xl font-bold text-gradient hover:shadow-glow transition-smooth">Krishna Kumar</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -61,10 +61,10 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     activeSection === item.href.substring(1)
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                      ? "text-primary bg-gradient-card shadow-glow border border-primary/20"
+                      : "text-muted-foreground hover:text-primary hover:bg-gradient-subtle hover:shadow-card"
                   }`}
                 >
                   {item.name}
@@ -87,15 +87,15 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-surface/95 backdrop-blur-md rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gradient-card backdrop-blur-xl rounded-lg mt-2 border border-border shadow-elevated">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-200 ${
+                  className={`block px-4 py-3 rounded-lg text-base font-medium w-full text-left transition-all duration-300 ${
                     activeSection === item.href.substring(1)
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                      ? "text-primary bg-gradient-primary/10 shadow-glow"
+                      : "text-muted-foreground hover:text-primary hover:bg-gradient-subtle"
                   }`}
                 >
                   {item.name}
