@@ -129,6 +129,14 @@ export default {
 				'scaleIn': {
 					from: { opacity: '0', transform: 'scale(0.8)' },
 					to: { opacity: '1', transform: 'scale(1)' }
+				},
+				'slide-right-to-left': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-100%)' }
+				},
+				'slide-left-to-right': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(0)' }
 				}
 			},
 			animation: {
@@ -139,7 +147,9 @@ export default {
 				'slide-in-up': 'slideInUp 0.8s ease-out',
 				'slide-in-left': 'slideInLeft 0.8s ease-out',
 				'slide-in-right': 'slideInRight 0.8s ease-out',
-				'scale-in': 'scaleIn 0.6s ease-out'
+				'scale-in': 'scaleIn 0.6s ease-out',
+				'slide-right-to-left': 'slide-right-to-left 20s linear infinite',
+				'slide-left-to-right': 'slide-left-to-right 20s linear infinite'
 			}
 		}
 	},

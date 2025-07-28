@@ -162,10 +162,84 @@ const Gallery = () => {
           ))}
         </div>
 
+        {/* First Image Slider - Right to Left */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-16 overflow-hidden"
+        >
+          <div className="flex animate-slide-right-to-left">
+            {/* First set of 5 images */}
+            {[
+              "/lovable-uploads/c56d313c-0d3f-497b-9f6d-98257f78280c.png",
+              "/lovable-uploads/30ca57ad-07a1-4585-a098-346517c1e47b.png", 
+              "/lovable-uploads/dd70724d-c549-427b-a720-60149b920d16.png",
+              "/lovable-uploads/bc94b9eb-b4d9-4d54-928f-df972c87f746.png",
+              "/lovable-uploads/ab779623-fd6b-4066-84c1-459f41f713f2.png"
+            ].concat([
+              "/lovable-uploads/c56d313c-0d3f-497b-9f6d-98257f78280c.png",
+              "/lovable-uploads/30ca57ad-07a1-4585-a098-346517c1e47b.png", 
+              "/lovable-uploads/dd70724d-c549-427b-a720-60149b920d16.png",
+              "/lovable-uploads/bc94b9eb-b4d9-4d54-928f-df972c87f746.png",
+              "/lovable-uploads/ab779623-fd6b-4066-84c1-459f41f713f2.png"
+            ]).map((image, index) => (
+              <div 
+                key={index}
+                className="flex-shrink-0 w-64 h-48 mx-4 rounded-lg overflow-hidden shadow-card hover-lift group cursor-pointer"
+              >
+                <img
+                  src={image}
+                  alt={`Gallery image ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Second Image Slider - Left to Right */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          viewport={{ once: true }}
+          className="mt-8 overflow-hidden"
+        >
+          <div className="flex animate-slide-left-to-right">
+            {/* Second set of 5 images */}
+            {[
+              "/lovable-uploads/46672a7a-31f9-468c-8a48-f21f58ab22e2.png",
+              "/lovable-uploads/50189081-aab8-4e69-8e8f-7ec4e9adc448.png",
+              "/lovable-uploads/4dbd42ba-6891-4495-a465-123e57d75edc.png",
+              "/lovable-uploads/e3e82d0a-f545-49ac-afc7-9f8dfe040e0b.png",
+              "/lovable-uploads/246706fb-40b2-4200-b7e9-138e78bfa1b1.png"
+            ].concat([
+              "/lovable-uploads/46672a7a-31f9-468c-8a48-f21f58ab22e2.png",
+              "/lovable-uploads/50189081-aab8-4e69-8e8f-7ec4e9adc448.png",
+              "/lovable-uploads/4dbd42ba-6891-4495-a465-123e57d75edc.png",
+              "/lovable-uploads/e3e82d0a-f545-49ac-afc7-9f8dfe040e0b.png",
+              "/lovable-uploads/246706fb-40b2-4200-b7e9-138e78bfa1b1.png"
+            ]).map((image, index) => (
+              <div 
+                key={index}
+                className="flex-shrink-0 w-64 h-48 mx-4 rounded-lg overflow-hidden shadow-card hover-lift group cursor-pointer"
+              >
+                <img
+                  src={image}
+                  alt={`Gallery image ${index + 6}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
           viewport={{ once: true }}
           className="text-center mt-12"
         >
