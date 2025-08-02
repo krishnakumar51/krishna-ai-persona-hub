@@ -91,7 +91,7 @@ const Hero = () => {
           </motion.h1>
           
           <motion.div 
-            className="text-xl md:text-2xl lg:text-3xl mb-12 text-muted-foreground min-h-[40px] flex items-center justify-center"
+            className="text-xl md:text-2xl lg:text-3xl mb-8 text-muted-foreground min-h-[40px] flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -115,11 +115,52 @@ const Hero = () => {
             />
           </motion.div>
 
+          {/* Profile Summary */}
+          <motion.div
+            className="max-w-4xl mx-auto mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <motion.div 
+              className="glassmorphism p-8 rounded-2xl border border-primary/20 bg-card/30 backdrop-blur-sm shadow-glow"
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: "0 25px 50px -12px rgba(var(--primary-rgb), 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.p 
+                className="text-lg leading-relaxed text-foreground/90 text-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+              >
+                I'm an <span className="text-gradient font-semibold">AI Developer</span> passionate about architecting intelligent, 
+                production-grade systems that drive real-world impact. From designing <span className="text-accent font-medium">LangChain-powered chatbots</span> and 
+                retrieval-augmented Q&A engines to building end-to-end <span className="text-primary font-medium">MLOps pipelines</span> with 
+                FastAPI, Docker, and Kubernetes, I combine deep ML expertise with scalable backend engineering. 
+                My work—whether integrating <span className="text-gradient font-medium">Groq LLMs</span> with Neo4j knowledge graphs or 
+                deploying voice-authentication modules—focuses on measurable improvements in accuracy, performance, and reliability. 
+                Always learning and iterating, I thrive on turning complex data problems into lean, user-centric solutions. 
+                <span className="block mt-4 text-accent font-medium">Feel free to explore my projects below or reach out to collaborate!</span>
+              </motion.p>
+              
+              {/* Subtle accent line */}
+              <motion.div 
+                className="w-32 h-1 bg-gradient-primary rounded-full mx-auto mt-6"
+                initial={{ width: 0 }}
+                animate={{ width: 128 }}
+                transition={{ duration: 1, delay: 1.2 }}
+              />
+            </motion.div>
+          </motion.div>
+
           <motion.div 
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
