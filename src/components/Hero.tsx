@@ -151,7 +151,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1.2 }}
               >
-                Feel free to explore my projects below or reach out to collaborate!
+                Looking forward to creating great things that make a meaningful impact in the world!
               </motion.p>
               
               {/* Subtle accent line */}
