@@ -117,21 +117,21 @@ const Hero = () => {
 
           {/* Profile Summary */}
           <motion.div
-            className="max-w-4xl mx-auto mb-12"
+            className="max-w-5xl mx-auto mb-10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.div 
-              className="glassmorphism p-8 rounded-2xl border border-primary/20 bg-card/30 backdrop-blur-sm shadow-glow"
+              className="glassmorphism p-6 md:p-8 rounded-2xl border border-primary/20 bg-card/30 backdrop-blur-sm shadow-glow"
               whileHover={{ 
-                scale: 1.02,
+                scale: 1.01,
                 boxShadow: "0 25px 50px -12px rgba(var(--primary-rgb), 0.3)"
               }}
               transition={{ duration: 0.3 }}
             >
               <motion.p 
-                className="text-lg leading-relaxed text-foreground/90 text-center"
+                className="text-base md:text-lg leading-relaxed text-foreground/90 text-left md:text-justify"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}
@@ -142,16 +142,24 @@ const Hero = () => {
                 FastAPI, Docker, and Kubernetes, I combine deep ML expertise with scalable backend engineering. 
                 My work—whether integrating <span className="text-gradient font-medium">Groq LLMs</span> with Neo4j knowledge graphs or 
                 deploying voice-authentication modules—focuses on measurable improvements in accuracy, performance, and reliability. 
-                Always learning and iterating, I thrive on turning complex data problems into lean, user-centric solutions. 
-                <span className="block mt-4 text-accent font-medium">Feel free to explore my projects below or reach out to collaborate!</span>
+                Always learning and iterating, I thrive on turning complex data problems into lean, user-centric solutions.
+              </motion.p>
+              
+              <motion.p
+                className="text-center mt-4 text-accent font-medium"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1.2 }}
+              >
+                Feel free to explore my projects below or reach out to collaborate!
               </motion.p>
               
               {/* Subtle accent line */}
               <motion.div 
-                className="w-32 h-1 bg-gradient-primary rounded-full mx-auto mt-6"
+                className="w-24 h-0.5 bg-gradient-primary rounded-full mx-auto mt-4"
                 initial={{ width: 0 }}
-                animate={{ width: 128 }}
-                transition={{ duration: 1, delay: 1.2 }}
+                animate={{ width: 96 }}
+                transition={{ duration: 1, delay: 1.3 }}
               />
             </motion.div>
           </motion.div>
