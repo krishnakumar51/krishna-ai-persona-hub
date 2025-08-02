@@ -167,7 +167,7 @@ const Contact = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                Currently Exploring Opportunities
+                Creating Great Things
               </motion.h3>
               
               <motion.p 
@@ -177,9 +177,9 @@ const Contact = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 viewport={{ once: true }}
               >
-                I'm actively seeking opportunities in AI/ML engineering, data science, and full-stack development. 
-                Particularly interested in roles at innovative companies like SproutsAI where I can contribute to 
-                cutting-edge AI solutions.
+                I'm passionate about creating innovative solutions that make a meaningful impact on people's lives. 
+                Always exploring new technologies and collaborating with like-minded individuals to build 
+                something truly remarkable.
               </motion.p>
               
               <motion.div
