@@ -128,6 +128,16 @@ const Skills = () => {
       skills: ["Apache Kafka", "PySpark"],
     },
     {
+      title: "Monitoring & Visualization",
+      icon: Activity,
+      skills: ["Prometheus", "Grafana", "Power BI", "Microsoft Excel"],
+    },
+    {
+      title: "Tools",
+      icon: Wrench,
+      skills: ["GitHub", "Postman", "Lovable.ai", "Cursor AI"],
+    },
+    {
       title: "DevOps & Cloud",
       icon: Cloud,
       skills: [
@@ -144,16 +154,6 @@ const Skills = () => {
       title: "Workflow & MLOps",
       icon: Settings,
       skills: ["Apache Airflow", "Astronomer CLI", "MLflow", "DVC", "DagsHub", "n8n"],
-    },
-    {
-      title: "Monitoring & Visualization",
-      icon: Activity,
-      skills: ["Prometheus", "Grafana", "Power BI", "Microsoft Excel"],
-    },
-    {
-      title: "Tools",
-      icon: Wrench,
-      skills: ["GitHub", "Postman", "Lovable.ai", "Cursor AI"],
     },
   ];
 
