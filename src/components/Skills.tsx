@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Globe, Database, Cloud, Wrench, Zap } from "lucide-react";
+import { Code, Globe, Database, Cloud, Wrench, Zap, Server, Cpu, Settings, Activity } from "lucide-react";
 import { motion } from "framer-motion";
 
 const SkillBadge = ({ skill, delay }: { skill: string; delay: number }) => {
@@ -77,33 +77,78 @@ const Skills = () => {
     {
       title: "Programming",
       icon: Code,
-      skills: ["Python", "C++", "JavaScript", "TypeScript", "HTML", "CSS", "Dart"]
+      skills: ["Python", "C++", "JavaScript", "TypeScript", "HTML", "CSS", "Dart"],
     },
     {
-      title: "Web & Mobile",
+      title: "Web & Mobile Frontend",
       icon: Globe,
-      skills: ["React.js", "Next.js", "Vite", "Flutter", "FastAPI", "Flask", "Node.js", "Express.js", "Puter.js"]
+      skills: ["React.js", "Next.js", "Vite", "Flutter", "Streamlit", "Gradio"],
+    },
+    {
+      title: "BaaS & Backend",
+      icon: Server,
+      skills: ["Supabase", "Puter.js", "Firebase", "FastAPI", "Flask", "Node.js", "Express.js"],
     },
     {
       title: "Databases",
       icon: Database,
-      skills: ["MySQL", "SQLite", "MongoDB", "Pinecone", "FAISS", "Neo4j", "Astra", "ChromaDB", "Weaviate"]
+      skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Pinecone", "FAISS", "Neo4j", "Astra", "ChromaDB", "Weaviate"],
     },
     {
       title: "AI & ML",
       icon: Zap,
-      skills: ["LangGraph", "LangChain", "Groq LLM", "Llama", "Gemini", "GPT", "Fine-tuning", "RAG", "CrewAI", "Agentic AI", "HuggingFace", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Nltk", "LSTM"]
+      skills: [
+        "LangGraph",
+        "LangChain",
+        "Transformers",
+        "Groq LLM",
+        "Fine-tuning",
+        "RAG",
+        "CrewAI",
+        "Agentic AI",
+        "HuggingFace",
+        "TensorFlow",
+        "PyTorch",
+        "Scikit-learn",
+        "OpenCV",
+        "NLTK",
+        "LSTM",
+        "Classification & Regression Models",
+      ],
+    },
+    {
+      title: "Big Data & Distributed Systems",
+      icon: Cpu,
+      skills: ["Apache Kafka", "PySpark"],
     },
     {
       title: "DevOps & Cloud",
       icon: Cloud,
-      skills: ["AWS", "GCP", "Docker", "Kubernetes", "GitHub Actions", "CircleCI", "Vercel"]
+      skills: [
+        "AWS (SageMaker, EC2, S3, RDS, DynamoDB, Lambda, EKS, CloudFormation, Glue, Kinesis, Redshift, Athena)",
+        "GCP (Compute Engine, BigQuery)",
+        "Docker",
+        "Kubernetes",
+        "GitHub Actions",
+        "CircleCI",
+        "Vercel",
+      ],
+    },
+    {
+      title: "Workflow & MLOps",
+      icon: Settings,
+      skills: ["Apache Airflow", "Astronomer CLI", "MLflow", "DVC", "DagsHub", "n8n"],
+    },
+    {
+      title: "Monitoring & Visualization",
+      icon: Activity,
+      skills: ["Prometheus", "Grafana", "Power BI", "Microsoft Excel"],
     },
     {
       title: "Tools",
       icon: Wrench,
-      skills: ["GitHub", "DVC", "DagsHub", "MLFlow", "Prometheus", "Grafana", "Power BI", "Postman", "Android Studio", "Firebase"]
-    }
+      skills: ["GitHub", "Postman", "Lovable.ai", "Cursor AI"],
+    },
   ];
 
   return (
