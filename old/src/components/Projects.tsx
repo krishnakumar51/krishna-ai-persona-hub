@@ -1,7 +1,7 @@
-// ─── src/components/Projects.tsx ───
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { FolderOpen } from "lucide-react";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import { projects, Project } from "@/data/projects";
@@ -12,10 +12,10 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<"deployed" | "significant" | "ml-dl" | "development">("deployed");
 
   const categories = [
-    { id: "deployed", label: "Deployed Projects", count: projects.filter(p => p.category === "deployed").length },
-    { id: "significant", label: "Best Projects",     count: projects.filter(p => p.category === "significant").length },
-    { id: "ml-dl",      label: "ML & DL",            count: projects.filter(p => p.category === "ml-dl").length },
-    { id: "development",label: "Development",        count: projects.filter(p => p.category === "development").length },
+    { id: "deployed", label: "Deployed", count: projects.filter(p => p.category === "deployed").length },
+    { id: "significant", label: "Best Projects", count: projects.filter(p => p.category === "significant").length },
+    { id: "ml-dl", label: "ML & DL", count: projects.filter(p => p.category === "ml-dl").length },
+    { id: "development", label: "Development", count: projects.filter(p => p.category === "development").length },
   ];
 
   const filteredProjects = projects.filter(p => p.category === activeCategory);
@@ -31,23 +31,37 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient font-heading">Projects</h2>
-          <p className="text-xl text-muted-foreground font-medium leading-relaxed tracking-wide md:text-2xl lg:text-3xl mb-4">
-            Code. Create. Evolve. 🌱🧠
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+            <FolderOpen className="w-4 h-4" />
+            <span className="text-sm font-medium">Portfolio</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground font-heading">
+            Projects
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Code. Create. Evolve.
           </p>
-        </div>
+        </motion.div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map(cat => (
             <Button
               key={cat.id}
               variant={activeCategory === cat.id ? "default" : "outline"}
-              onClick={() => setActiveCategory(cat.id as any)}
-              className="hover-lift"
+              size="sm"
+              onClick={() => setActiveCategory(cat.id as typeof activeCategory)}
+              className="transition-colors"
             >
               {cat.label} ({cat.count})
             </Button>
@@ -55,20 +69,26 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((proj, idx) => (
-            <ProjectCard
+            <motion.div
               key={idx}
-              title={proj.title}
-              goal={proj.goal}
-              development={proj.development}
-              features={proj.features}
-              tags={proj.tags}
-              image={proj.image}
-              onClick={() => handleProjectClick(proj)}
-              website={proj.website}  // ← passed down
-              github={proj.github}    // ← passed down
-            />
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: idx * 0.05 }}
+            >
+              <ProjectCard
+                title={proj.title}
+                goal={proj.goal}
+                development={proj.development}
+                features={proj.features}
+                tags={proj.tags}
+                image={proj.image}
+                onClick={() => handleProjectClick(proj)}
+                website={proj.website}
+                github={proj.github}
+              />
+            </motion.div>
           ))}
         </div>
 
