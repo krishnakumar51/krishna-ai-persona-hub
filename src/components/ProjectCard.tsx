@@ -12,6 +12,7 @@ interface ProjectCardProps {
   image?: string;
   website?: string;
   github?: string;
+  flagship?: boolean;
 }
 
 const ProjectCard = ({
@@ -22,12 +23,25 @@ const ProjectCard = ({
   image,
   website,
   github,
+  flagship,
 }: ProjectCardProps) => {
   return (
     <Card
-      className="relative border border-border/50 bg-card cursor-pointer group h-full overflow-hidden hover:border-primary/30 transition-colors duration-300"
+      className={`relative border bg-card cursor-pointer group h-full overflow-hidden transition-all duration-300 ${
+        flagship 
+          ? "border-primary/40 shadow-[0_0_20px_-5px_hsl(var(--primary)/0.25)] hover:border-primary/60 hover:shadow-[0_0_30px_-5px_hsl(var(--primary)/0.35)]" 
+          : "border-border/50 hover:border-primary/30"
+      }`}
       onClick={onClick}
     >
+      {/* Flagship badge */}
+      {flagship && (
+        <div className="absolute top-3 left-3 z-10">
+          <Badge className="bg-primary text-primary-foreground text-[10px] font-semibold tracking-wider uppercase">
+            Flagship
+          </Badge>
+        </div>
+      )}
       {/* Thumbnail */}
       <div className="relative h-48 overflow-hidden">
         {image ? (

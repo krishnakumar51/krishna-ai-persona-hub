@@ -82,6 +82,7 @@ const Projects = () => {
                 onClick={() => handleProjectClick(proj)}
                 website={proj.website}
                 github={proj.github}
+                flagship={proj.flagship}
               />
             </motion.div>
           ))}

@@ -22,6 +22,12 @@ const Index = () => {
       <div id="hero">
         <Hero />
       </div>
+
+      {/* Flagship Showcase */}
+      <LazyComponent
+        importFn={() => import("@/components/FlagshipShowcase")}
+        fallback={<LoadingSkeleton type="card" count={1} />}
+      />
       
       {/* Simplified lazy loaded sections */}
       <div id="experience" className="section-container">

@@ -41,11 +41,6 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent mb-6">
-            <MessageCircle className="w-4 h-4" />
-            <span className="text-sm font-medium">Get in Touch</span>
-          </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground font-heading">
             Let's Connect
           </h2>

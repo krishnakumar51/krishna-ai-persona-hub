@@ -12,6 +12,7 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+
       {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
       
@@ -52,10 +53,10 @@ const Hero = () => {
             <div className="mb-8">
               <div className="p-5 md:p-6 rounded-2xl border border-border bg-card/50">
                 <p className="text-base leading-relaxed text-muted-foreground text-left">
-                  I'm an <span className="text-primary font-medium">AI Developer</span> passionate about architecting intelligent, 
-                  production-grade systems that drive real-world impact. From designing <span className="text-accent font-medium">LangChain-powered chatbots</span> and 
-                  retrieval-augmented Q&A engines to building end-to-end <span className="text-primary font-medium">MLOps pipelines</span> with 
-                  FastAPI, Docker, and Kubernetes, I combine deep ML expertise with scalable backend engineering.
+                  An <span className="text-primary font-medium">AI Engineer</span> focused on LLM evaluation, agentic workflows, and scalable AI systems. 
+                  Experienced in building <span className="text-accent font-medium">real-time benchmarking platforms</span>, async model pipelines, and 
+                  production-grade deployments. Skilled in developing <span className="text-primary font-medium">RAG pipelines</span> and internal AI tools 
+                  using FastAPI, n8n, and modern web stacks.
                 </p>
                 
                 <p className="text-left lg:text-left mt-3 text-accent font-medium text-sm">
@@ -84,9 +85,9 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right - Avatar Illustration */}
+          {/* Right - Avatar + AI Arena */}
           <motion.div
-            className="flex-shrink-0"
+            className="flex-shrink-0 relative"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}

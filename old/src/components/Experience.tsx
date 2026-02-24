@@ -15,35 +15,49 @@ interface Job {
 const Experience = () => {
   const jobs: Job[] = [
     {
-      title: "AI/ML Intern",
+      title: "AI Engineer",
+      company: "Lucky Communities",
+      location: "United States, Remote",
+      period: "Oct 2025 – Present",
+      achievements: [
+        "Implemented internal RAG system using n8n with a React + Vite frontend for semantic search over shared drives",
+        "Orchestrated business workflows with Zapier + n8n across Google Workspace, Notion, Slack, and Asana",
+        "Engineered scalable document ingestion pipelines from Rent Manager to Shared Drive",
+        "Created low-code internal tools using AppSheet for process automation",
+        "Partnered with operations teams to deliver AI-first automation solutions"
+      ],
+      technologies: ["n8n", "React", "Vite", "Zapier", "AppSheet", "RAG"]
+    },
+    {
+      title: "AI/ML Engineer",
       company: "SearchLook",
       location: "Mexico, Remote",
-      period: "Aug 2025 – Present",
+      period: "Aug 2025 – Nov 2025",
       achievements: [
-        "Built automated frontend for WebScraper AI platform using React, Vite and Tailwind",
-        "Integrated FastAPI backend with MongoDB enabling real-time API communication",
-        "Developed automation modules using Selenium, Playwright and Appium for web and Android",
-        "Automated IMSS workflows and Outlook account creation, reducing manual effort by 70%",
-        "Contributed to PlanGraph agentic automation framework for multi-step reasoning workflows",
-        "Designed intelligent agents capable of dynamic, adaptive multi-stage navigation",
-        "Building agentic AI browser for autonomous search, extraction and workflow execution",
-        "Developing mobile autonomous scraper using OCR, reasoning and Android automation"
+        "Structured a front-end for WebScraper AI using React, Vite, and Tailwind, improving UI responsiveness",
+        "Integrated a scalable FastAPI backend with MongoDB, enabling real-time data sync and high-throughput API operations",
+        "Improved cross-platform automation modules using Selenium, Playwright, and Appium for large-scale web and Android task execution",
+        "Streamlined IMSS app workflows and Outlook account creation, reducing manual operational effort by over 70%",
+        "Contributed to PlanGraph, an agentic automation framework enabling multi-step reasoning and autonomous browser workflows",
+        "Designed intelligent agents capable of dynamic, multi-stage web navigation and adaptive task execution",
+        "Collaborating on a fully agentic AI browsing system for autonomous web navigation, extraction, and workflow completion",
+        "Building an AI-driven mobile autonomous scraper combining automated reasoning, OCR, and Android UI understanding"
       ],
       technologies: ["React", "Vite", "FastAPI", "MongoDB", "Selenium", "Playwright", "Appium"]
     },
     {
       title: "AI Developer",
       company: "Intellisense Technology",
-      location: "India",
+      location: "Jalandhar, Punjab",
       period: "Aug 2024 – Nov 2024",
       achievements: [
-        "Built enterprise chatbot using LangChain improving accuracy by 40% and reducing latency by 25%",
-        "Improved inference throughput by 60% via Groq LLM and Llama-3 integration",
-        "Reduced hallucination rate from 5% to 2% using Neo4j Knowledge Graph for 100+ documents",
-        "Built AI services for SafeGuard 360 processing 1000+ daily events with 99.7% uptime",
-        "Implemented voice authentication (ECAPA-TDNN + LSTM) with 95.6% accuracy",
-        "Delivered sub-200ms FastAPI REST APIs supporting concurrent users",
-        "Containerized backend using Docker and integrated Flutter deployments reducing release time by 70%"
+        "Architected a chatbot using LangChain, improving resolution accuracy by 40% and reducing latency by 25%",
+        "Enhanced inference throughput by 60% using Groq LLM + Llama-3 integration",
+        "Reduced hallucination rate from 5% → 2% with a Neo4j Knowledge Graph powering 100+ document queries",
+        "Built AI services for SafeGuard 360, handling 1000+ daily events with 99.7% uptime",
+        "Enhanced a voice authentication system (ECAPA-TDNN + LSTM), achieving 95.6% accuracy on wake-word audio",
+        "Deployed low-latency REST APIs supporting concurrent user sessions using FastAPI",
+        "Containerized backend with Docker and integrated Flutter frontend, reducing deployment time by 70%"
       ],
       technologies: ["LangChain", "Neo4j", "Groq LLM", "Llama-3", "FastAPI", "Docker", "Flutter"]
     }
@@ -59,11 +73,6 @@ const Experience = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
-            <Briefcase className="w-4 h-4" />
-            <span className="text-sm font-medium">Professional Journey</span>
-          </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground font-heading">
             Work Experience
           </h2>

@@ -8,10 +8,29 @@ export interface Project {
   website?: string;
   github?: string;
   image?: string;
+  flagship?: boolean;
 }
 
 export const projects: Project[] = [
   // Deployed Projects
+  {
+    title: "AI Arena — Real-Time LLM Evaluation Platform",
+    goal: "A production-grade platform for evaluating and benchmarking LLM reasoning using structured scoring, async pipelines, and deterministic validation environments.",
+    development: "Full-stack evaluation infrastructure designed to test, compare, and analyze large language models in controlled environments. Enables structured scoring of model behavior, async batch evaluations, and reproducible experimentation workflows for real-world AI validation.",
+    features: [
+      "Deterministic evaluation framework scoring model outputs against validated solvers",
+      "Async execution architecture using Celery + Redis for large-scale benchmarking",
+      "Provider-agnostic model interface supporting multiple LLM APIs",
+      "Structured analytics capturing latency, optimality, and reliability metrics",
+      "Containerized deployment with CI/CD for reproducible experimentation"
+    ],
+    tags: ["FastAPI", "PostgreSQL", "Redis", "Celery", "Docker", "React", "TypeScript", "CI/CD"],
+    category: "deployed",
+    website: "https://ai-arena-tau.vercel.app/",
+    github: "",
+    flagship: true,
+    image: "/lovable-uploads/ai-arena-banner.png",
+  },
   {
     title: "AI Resume Analyser",
     goal: "Build an AI tool to analyze resumes for ATS-compatibility and provide actionable feedback to improve job-seeking outcomes.",
