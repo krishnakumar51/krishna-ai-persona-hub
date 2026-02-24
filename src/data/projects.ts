@@ -29,7 +29,7 @@ export const projects: Project[] = [
     website: "https://ai-arena-tau.vercel.app/",
     github: "",
     flagship: true,
-      image: "public/lovable-uploads/iiii.png",
+    image: "/lovable-uploads/iiii.png",
   },
   {
     title: "AI Resume Analyser",
