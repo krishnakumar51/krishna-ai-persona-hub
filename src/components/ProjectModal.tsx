@@ -82,7 +82,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
         </div>
 
         {/* Footer with Icon Buttons */}
-        <DialogFooter className="flex justify-end gap-4 px-6 py-4">
+        <DialogFooter className="flex flex-wrap justify-end gap-4 px-6 py-4">
           {project.website && (
             <Button
               asChild
@@ -119,6 +119,25 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
               </a>
             </Button>
           )}
+          {project.extraLinks?.map((link, idx) => (
+            <Button
+              key={idx}
+              asChild
+              variant="outline"
+              size="sm"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1"
+              >
+                <ExternalLink className="w-4 h-4" />
+                {link.label}
+              </a>
+            </Button>
+          ))}
         </DialogFooter>
       </DialogContent>
     </Dialog>

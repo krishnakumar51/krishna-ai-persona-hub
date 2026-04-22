@@ -1,3 +1,8 @@
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   title: string;
   goal: string;
@@ -9,6 +14,7 @@ export interface Project {
   github?: string;
   image?: string;
   flagship?: boolean;
+  extraLinks?: ProjectLink[];
 }
 
 export const projects: Project[] = [
@@ -30,6 +36,27 @@ export const projects: Project[] = [
     github: "",
     flagship: true,
     image: "/lovable-uploads/iiii.png",
+  },
+  {
+    title: "Bright Smile Dental — Voice AI Receptionist",
+    goal: "A production voice AI agent (Maya) handling end-to-end inbound dental front-desk calls — patient verification, symptom-driven routing across 6 appointment types, real-time slot booking via Cal.com, and structured post-call logging.",
+    development: "Built a fully autonomous voice AI receptionist using Feather for telephony, n8n for middleware orchestration, Cal.com for scheduling, and Google Sheets for structured logging. Maya handles live inbound calls with zero human intervention unless escalation is needed.",
+    features: [
+      "Phone number fallback for failed identity verification",
+      "Symptom-to-appointment decision tree with urgency scoring (Low / Medium / High)",
+      "Mid-call concern handling and frictionless slot rescheduling",
+      "Graceful escalation to office manager for unresolvable cases",
+      "3 n8n webhook workflows as middleware between Feather and external APIs"
+    ],
+    tags: ["Feather", "n8n", "Cal.com API", "Google Sheets", "GPT-4"],
+    category: "deployed",
+    website: "https://dashboard.featherhq.com/shareable-link/WKPVTEvDzR57JCfy2vseEXuPmd1MAJZT4JCKqpfMmbw",
+    image: "/lovable-uploads/bright-smile-dental-voice-ai.jpg",
+    extraLinks: [
+      { label: "Live Agent", url: "https://dashboard.featherhq.com/shareable-link/WKPVTEvDzR57JCfy2vseEXuPmd1MAJZT4JCKqpfMmbw" },
+      { label: "Live Demo (Video)", url: "https://www.loom.com/share/b0ece6fa50f84a8f8917999e1dd33a0f" },
+      { label: "Architecture Walkthrough", url: "https://www.loom.com/share/73e7b71b5190422cb1301af2cc4a834a" }
+    ]
   },
   {
     title: "AI Resume Analyser",

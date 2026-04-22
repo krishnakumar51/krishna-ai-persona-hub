@@ -20,13 +20,15 @@ const Experience = () => {
       location: "United States, Remote",
       period: "Oct 2025 – Present",
       achievements: [
-        "Implemented internal RAG system using n8n with a React + Vite frontend for semantic search over shared drives",
-        "Orchestrated business workflows with Zapier + n8n across Google Workspace, Notion, Slack, and Asana",
-        "Engineered scalable document ingestion pipelines from Rent Manager to Shared Drive",
-        "Created low-code internal tools using AppSheet for process automation",
-        "Partnered with operations teams to deliver AI-first automation solutions"
+        "Built a 4-workflow AI SMS outreach automation using n8n, OpenPhone, and Groq that handles full lead lifecycle: cold outbound messaging, delivery failure detection, AI-driven reply handling with human-in-the-loop Slack approval, and a scheduled 24-hour follow-up sweeper — achieving 15–18% reply rate and 5% positive conversion in production",
+        "Engineered a strict path-based AI reply classifier (9 conversation paths) acting as \"Krishna\", Lucky Communities' AI Lead Manager — using Groq at temperature 0.1 with verbatim scripts per path, zero improvisation, and human approval via Slack before every send",
+        "Built a bilingual lots lead outreach system (English + Spanish) with a 3-step qualification flow, Gerald handoff detection, and dual Asana project tracking (Lots Leads + Handoff to Gerald)",
+        "Designed a document processing pipeline using Claude Haiku 4.5 — monitors uploads@luckycommunities.com, uploads PDFs to Claude Files API, extracts document types + page ranges, splits PDFs, organizes into Google Drive subfolders, creates Asana review tasks, and notifies team via Slack — fully automated end-to-end",
+        "Built a renewal alerts automation using Notion, Gmail, and Slack — runs every 23 hours, detects insurance renewal deadlines, drafts emails, and posts Slack alerts with deduplication via Notion checkbox guard",
+        "Implemented custom Asana–Slack integration using raw HTTP APIs and webhooks, handling event parsing, deduplication, and cross-system field mapping beyond native n8n node capabilities",
+        "All systems track leads across Google Sheets + Asana with structured logging, status fields, message counts, and timestamps"
       ],
-      technologies: ["n8n", "React", "Vite", "Zapier", "AppSheet", "RAG"]
+      technologies: ["n8n", "OpenPhone", "Groq", "Claude API", "Slack", "Asana", "Google Sheets", "Notion"]
     },
     {
       title: "AI/ML Engineer",
