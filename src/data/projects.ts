@@ -1,3 +1,8 @@
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   title: string;
   goal: string;
@@ -9,6 +14,7 @@ export interface Project {
   github?: string;
   image?: string;
   flagship?: boolean;
+  extraLinks?: ProjectLink[];
 }
 
 export const projects: Project[] = [
