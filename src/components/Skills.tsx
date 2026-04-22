@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Globe, Database, Cloud, Wrench, Zap, Server, Activity, Link, Brain, Cpu, BarChart3, Settings } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const skillCategories = [
