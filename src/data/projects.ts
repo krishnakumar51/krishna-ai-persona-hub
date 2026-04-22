@@ -57,6 +57,7 @@ export const projects: Project[] = [
       { label: "Live Demo (Video)", url: "https://www.loom.com/share/b0ece6fa50f84a8f8917999e1dd33a0f" },
       { label: "Architecture Walkthrough", url: "https://www.loom.com/share/73e7b71b5190422cb1301af2cc4a834a" }
     ]
+  },
   {
     title: "AI Resume Analyser",
     goal: "Build an AI tool to analyze resumes for ATS-compatibility and provide actionable feedback to improve job-seeking outcomes.",
