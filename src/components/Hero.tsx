@@ -36,6 +36,8 @@ const Hero = () => {
                 sequence={[
                   "AI/ML Engineer",
                   2500,
+                  "AI Automations Engineer",
+                  2500,
                   "Full-Stack Developer", 
                   2500,
                   "MLOps Specialist",
@@ -53,10 +55,9 @@ const Hero = () => {
             <div className="mb-8">
               <div className="p-5 md:p-6 rounded-2xl border border-border bg-card/50">
                 <p className="text-base leading-relaxed text-muted-foreground text-left">
-                  An <span className="text-primary font-medium">AI Engineer</span> focused on LLM evaluation, agentic workflows, and scalable AI systems. 
-                  Experienced in building <span className="text-accent font-medium">real-time benchmarking platforms</span>, async model pipelines, and 
-                  production-grade deployments. Skilled in developing <span className="text-primary font-medium">RAG pipelines</span> and internal AI tools 
-                  using FastAPI, n8n, and modern web stacks.
+                  An <span className="text-primary font-medium">AI Engineer & Automations Architect</span> building end-to-end AI systems — from <span className="text-accent font-medium">agentic workflows and voice AI agents</span> to full-stack web applications and production ML pipelines. 
+                  Experienced in designing <span className="text-primary font-medium">multi-step AI automations</span> with n8n, LangGraph, and Groq, alongside scalable backends using FastAPI, Supabase, and cloud-native infrastructure. 
+                  Skilled in <span className="text-accent font-medium">RAG pipelines</span>, LLM evaluation platforms, real-time benchmarking systems, and human-in-the-loop AI workflows.
                 </p>
                 
                 <p className="text-left lg:text-left mt-3 text-accent font-medium text-sm">
