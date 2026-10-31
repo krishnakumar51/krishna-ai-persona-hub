@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.tmp-browser-desktop/
+
+.tmp-browser-mobile/
+desktop-audit.png
+mobile-audit.png
+desktop-viewport.png
+mobile-viewport.png
+mobile-menu.png
+tablet-audit.png
+old/
